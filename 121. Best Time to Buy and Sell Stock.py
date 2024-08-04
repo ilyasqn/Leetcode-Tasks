@@ -10,9 +10,14 @@ class Solution(object):
         #         if prices[i] - prices[j] > count:
         #             count = prices[i] - prices[j]
         # return count
-
         
+        min_price = prices[0]
+        max_diff = 0
         
+        for price in prices[1:]:
+            max_diff = max(max_diff, price - min_price)
+            min_price = min(min_price, price)
+        return max_diff
         
         
         
