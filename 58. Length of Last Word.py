@@ -1,14 +1,14 @@
-class Solution(object):
-    def lengthOfLastWord(self, s):
-        """
-        :type s: str
-        :rtype: int
-        """
+class Solution:
+    def priceNextMonth(self, A, B, C, D):
+    
+        price = A / B
         
-        return len(s.split()[-1])
-
-
-
+        if D > price:
+            nextMonthPrice = A + (C * (D - price))
+        else:
+            nextMonthPrice = A
+        
+        return nextMonthPrice
 
 a = Solution()
-print(a.lengthOfLastWord(s = "Hello World"))
+print(a.priceNextMonth(100  ,10  ,12,  1))
